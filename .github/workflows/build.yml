@@ -40,13 +40,13 @@ jobs:
       run: msbuild /m /p:Configuration=Debug ${{env.SOLUTION_FILE_PATH}}
       
     - name: Upload debug build artifact
-      uses: actions/upload-artifact@v3.1.3
+      uses: actions/upload-artifact@v4.3.4
       with:
         name: PaintDebug
         path: D:\a\Paint\Paint\mspaint\Debug\mspaint.exe
         
     - name: Upload debug symbol artifact
-      uses: actions/upload-artifact@v3.1.3
+      uses: actions/upload-artifact@v4.3.4
       with:
         name: PaintDebug
         path: D:\a\Paint\Paint\mspaint\Debug\mspaint.pdb
@@ -67,13 +67,13 @@ jobs:
       run: msbuild /m /p:Configuration=${{env.BUILD_CONFIGURATION}} ${{env.SOLUTION_FILE_PATH}}
       
     - name: Upload release build artifact
-      uses: actions/upload-artifact@v3.1.3
+      uses: actions/upload-artifact@v4.3.4
       with:
         name: PaintRelease
         path: D:\a\Paint\Paint\mspaint\Release\mspaint.exe
         
     - name: Upload release symbol artifact
-      uses: actions/upload-artifact@v3.1.3
+      uses: actions/upload-artifact@v4.3.4
       with:
         name: PaintRelease
         path: D:\a\Paint\Paint\mspaint\Release\mspaint.pdb
@@ -94,13 +94,13 @@ jobs:
       run: msbuild /m /p:Configuration="ANSI Debug" ${{env.SOLUTION_FILE_PATH}}
       
     - name: Upload ANSI debug build artifact
-      uses: actions/upload-artifact@v3.1.3
+      uses: actions/upload-artifact@v4.3.4
       with:
         name: PaintDebugA
         path: D:\a\Paint\Paint\mspaint\DebugA\mspaint.exe
         
     - name: Upload ANSI debug symbol artifact
-      uses: actions/upload-artifact@v3.1.3
+      uses: actions/upload-artifact@v4.3.4
       with:
         name: PaintDebugA
         path: D:\a\Paint\Paint\mspaint\DebugA\mspaint.pdb
@@ -122,13 +122,13 @@ jobs:
       run: msbuild /m /p:Configuration="ANSI Release" ${{env.SOLUTION_FILE_PATH}}
       
     - name: Upload ANSI release build artifact
-      uses: actions/upload-artifact@v3.1.3
+      uses: actions/upload-artifact@v4.3.4
       with:
         name: PaintReleaseA
         path: D:\a\Paint\Paint\mspaint\ReleaseA\mspaint.exe
 
     - name: Upload ANSI release symbol artifact
-      uses: actions/upload-artifact@v3.1.3
+      uses: actions/upload-artifact@v4.3.4
       with:
         name: PaintReleaseA
         path: D:\a\Paint\Paint\mspaint\ReleaseA\mspaint.pdb
